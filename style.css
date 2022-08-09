@@ -1,0 +1,117 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.box{
+    position: relative;
+    width: 550px;
+    height: 400px;
+    cursor: pointer;
+    /* background: rgb(12, 12, 12); */
+
+}
+
+.box span{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../blog2.webp)no-repeat center center/cover;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+span:nth-child(1){
+    clip-path: polygon(0 0, 51% 0, 51% 49%, 0 49%);
+    /* background-color: red; */
+}
+
+span:nth-child(2){
+    clip-path: polygon(49% 0, 100% 0, 100% 49%, 49% 49%);
+    /* background-color: blue; */
+}
+
+
+span:nth-child(3){
+    clip-path: polygon(0 49%, 49% 49%, 49% 100%, 0 100%) ;
+    /* background-color: green; */
+}
+
+
+span:nth-child(4){
+    clip-path: polygon(49% 49%, 100% 49%, 100% 100%, 49% 100%) ;
+    /* background-color: orange; */
+}
+
+
+.box:hover span:nth-child(1){
+    transform: translate(-50px, -80px) rotate(-15deg);
+
+}
+
+.box:hover span:nth-child(2){
+    transform: translate(50px, -100px) rotate(25deg);
+    transition-delay: 0.25s;
+    
+}
+
+
+.box:hover span:nth-child(3){
+    transform: translate(-50px, 110px) rotate(15deg);
+    transition-delay: 0.5s;
+
+    
+}
+
+
+.box:hover span:nth-child(4){
+    transform: translate(50px, 110px) rotate(-15deg);
+    transition-delay: 0.75s;
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------- clip path maker -------------------------------------------------- */
+
+/* span 1 --   clip-path: polygon(0 0, 51% 0, 51% 49%, 0 49%) */
+/* span 2 --    clip-path: polygon(49% 0, 100% 0, 100% 49%, 49% 49%) */
+/* span 3 --   clip-path: polygon(0 49%, 49% 49%, 49% 100%, 0 100%) */
+/* span 4 --      clip-path: polygon(47% 49%, 100% 49%, 100% 100%, 47% 100%) */
